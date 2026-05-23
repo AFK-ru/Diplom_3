@@ -39,6 +39,7 @@ class FeedPage(BasePage):
     def is_order_number_in_progress_block(self, order_number):
 
         self.find_element_visible(FeedPageLocators.FEED_TITLE, time=15)
-        locator = ("xpath", "/html/body/div/div/main/div/div/div/div[1]/ul[2]")
+        locator = FeedPageLocators.IN_PROGRESS_ORDERS_LIST
         expected_number_with_zero = "0" + str(order_number).strip()
         return WebDriverWait(self.driver, 20).until(EC.text_to_be_present_in_element(locator, expected_number_with_zero))
+    

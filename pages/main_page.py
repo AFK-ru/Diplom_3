@@ -82,7 +82,7 @@ class MainPage(BasePage):
     @allure.step("Получить номер созданного заказа из всплывающего окна подтверждения")
     def get_created_order_number(self):
 
-        locator = ("xpath", "/html/body/div/div/section/div[1]/div/h2")
+        locator = MainPageLocators.ORDER_NUMBER_IN_MODAL
         WebDriverWait(self.driver, 15).until_not(lambda d: d.find_element(*locator).text.strip() == "9999" or d.find_element(*locator).text.strip() == "")
         order_text = self.get_element_text(locator)
         clean_number = "".join(filter(str.isdigit, order_text))

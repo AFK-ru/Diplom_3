@@ -21,7 +21,7 @@ class MainPageLocators:
     ORDER_MODAL = (By.XPATH, "//*[contains(@class, 'opened') or contains(@class, 'Modal_modal_opened')]")
     
     # Номер заказа во всплывающем окне ORDER_MODAL
-    ORDER_NUMBER_IN_MODAL = (By.XPATH, "//*[contains(@class, 'opened') or contains(@class, 'Modal_modal_opened')]//h2[contains(@class, 'digits') or contains(@class, 'phone') or string-length(text()) > 0]")
+    ORDER_NUMBER_IN_MODAL = (By.XPATH, "//*[contains(@class, 'opened') or contains(@class, 'Modal_modal_opened')]//h2[contains(@class, 'digits')]")
 
     # Заголовок открытого модального окна деталей ингредиента
     INGREDIENT_MODAL_TITLE = (By.XPATH, "//h2[text()='Детали ингредиента']")
@@ -33,6 +33,6 @@ class MainPageLocators:
     MODAL_CLOSE_BUTTON = (By.XPATH, "//button[contains(@class, 'Modal_modal__close')]")
 
     # Блок авторизации (Email, Пароль, кнопка "Войти")
-    LOGIN_EMAIL_INPUT = (By.XPATH, "//input[@type='text' or @name='name']")
-    LOGIN_PASSWORD_INPUT = (By.XPATH, "//input[@type='password' or @name='Пароль']")
+    LOGIN_EMAIL_INPUT = (By.XPATH, "//input[@name='name']")
+    LOGIN_PASSWORD_INPUT = (By.XPATH, "//input[@name='Пароль']")
     LOGIN_SUBMIT_BUTTON = (By.XPATH, "//button[text()='Войти']")

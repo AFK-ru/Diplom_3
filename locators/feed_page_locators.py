@@ -12,7 +12,7 @@ class FeedPageLocators:
     TODAY_ORDERS_COUNTER = (By.XPATH, "(//p[contains(@class, 'digits-large') or contains(@class, 'number')])[2]")
 
     # Блок списка заказов "В работе"
-    IN_PROGRESS_ORDERS_LIST = (By.XPATH, "//p[text()='В работе']/following-sibling::ul[contains(@class, 'OrderFeed_list')]/li")
+    IN_PROGRESS_ORDERS_LIST = (By.XPATH, "//ul[contains(@class, 'OrderFeed_orderListReady')]")
 
     # Карточки заказов в ленте
     ORDER_CARDS = (By.XPATH, "//div[contains(@class, 'OrderHistory_box')]")
